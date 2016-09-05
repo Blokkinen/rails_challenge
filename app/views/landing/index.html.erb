@@ -1,6 +1,10 @@
 <h1>Landing#index</h1>
-<p>A breaking news item</p>
-<p>Some really breaking action</p>
-<br>
-<p>Learn Rails 5</p>
-<p>Build awesome rails applications</p>
+
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <%= article.title %><br />
+      <%= article.content %>
+    </li>
+  <% end %>
+</ul>

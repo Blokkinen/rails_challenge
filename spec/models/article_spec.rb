@@ -17,4 +17,9 @@ RSpec.describe Article, type: :model do
       expect(FactoryGirl.create(:article)).to be_valid
     end
   end
+
+  class Article < ApplicationRecord
+    validates :title, presence: true
+    validates :content, presence: true
+  end
 end
