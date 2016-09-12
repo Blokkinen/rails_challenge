@@ -1,0 +1,15 @@
+<%= @article.title %>
+<%= @article.content %>
+<%= form_for([@article, @comment]) do |form| %>
+  <%= form.label :comment %>
+  <%= form.text_area :comment %>
+  <%= form.label :email %>
+  <%= form.text_field :email %>
+  <%= form.submit %>
+<% end %>
+<% if @comments %>
+  <% @comments.each do |comment| %>
+    <%= comment.comment %>
+    <%= comment.email %>
+  <% end %>
+<% end %>

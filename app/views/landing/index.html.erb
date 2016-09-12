@@ -1,9 +1,9 @@
-<h1>Landing#index</h1>
+<h1>Here is where my articles should be:</h1>
 
 <ul>
   <% @articles.each do |article| %>
     <li>
-      <%= article.title %><br />
+      <%= link_to article.title, article_path(article) %><br />
       <%= article.content %>
     </li>
   <% end %>
